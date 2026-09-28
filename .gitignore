@@ -1,0 +1,9 @@
+.DS_Store
+*.3gx
+*.egg
+*.zip
+*.elf
+*.log
+*.dmp
+.env
+.env.*
