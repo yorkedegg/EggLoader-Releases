@@ -1,5 +1,11 @@
 # Releases
 
+## Docs and starter update
+
+Shorter README, a list of our eggs/prototypes, and a buildable hello-egg example.
+The example was checked against the compiled loader offline. The released
+plugin hasn't changed.
+
 ## 0.0.1 — experimental
 
 First public download of EggLoader's code-only native egg loader.

@@ -24,5 +24,9 @@ implied. No blanket license for EggLoader or third-party art is granted here.
 
 Dependency notice copies were retrieved from their upstream projects while
 preparing this release. Their licenses apply to those components, not to every
-file in this repository. This is a downloads/documentation repository, not a
-complete source distribution.
+file in this repository. This repo now includes a small starter SDK as well as
+downloads and docs; it still isn't the full loader source tree.
+
+The starter copies EggLoader's own `host.h`, `module.ld` and `module_image.py`.
+Its build script and hello example were added for this public repo. They contain
+no game implementation or NuMC source. No additional license grant is implied.

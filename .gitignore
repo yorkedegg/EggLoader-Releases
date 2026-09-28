@@ -7,3 +7,6 @@
 *.dmp
 .env
 .env.*
+build/
+__pycache__/
+*.yolk
