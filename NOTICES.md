@@ -1,32 +1,42 @@
-# Credits and dependency notices
+# Credits and licenses
 
-EggLoader is a homebrew project, not an official Minecraft or Nintendo product.
-This release does not include a game dump, NuMC IPS/native files, texture packs,
-research captures, or the private repository history.
+EggLoader is unofficial homebrew. No Minecraft or NuMC game files are bundled.
+The asset preparer reads your own inputs and makes a private SD installation.
 
-- [libctru](https://github.com/devkitPro/libctru): 3DS system APIs linked into the plugin.
-  Upstream README, including its license, is in `notices/libctru-README.md`.
-- [devkitPro/newlib](https://github.com/devkitPro/newlib): C runtime routines.
-  Upstream collected notices are in `notices/COPYING.NEWLIB`.
-- [GCC](https://gcc.gnu.org/): compiler/runtime support, through devkitARM.
-  License and runtime exception are in `notices/COPYING3` and
-  `notices/COPYING.RUNTIME`.
-- [3gxtool](https://github.com/Nanquitas/3gxtool), by Nanquitas: plugin container
-  conversion. The tool executable/source is not bundled.
-- [Luma3DS](https://github.com/LumaTeam/Luma3DS): required custom firmware;
-  firmware is not bundled. Startup checks recognize the supported firmware's
-  changes using hashes, not an embedded copy of its redirector.
+## Aether
 
-The existing ModMenu frontend is integrated into EggLoader, not installed as a
-second plugin. Its egg graphic is based on Minecraft's icon; Minecraft names
-and imagery belong to their respective owners. No third-party endorsement is
-implied. No blanket license for EggLoader or third-party art is granted here.
+`dimension_module.egg` contains a C adaptation of code from
+[The Aether (Aether Legacy), 1.12.2](https://github.com/The-Aether-Team/The-Aether-Archived/tree/1.12.2),
+by The Aether Team and its contributors, licensed under **LGPL-3.0**.
+The port was modified for EggLoader's callbacks, ARM/VFP execution, block families,
+entity registration, world generation and dimension travel in September 2026.
+It is not an official Aether release and does not contain the full mod.
 
-Dependency notice copies were retrieved from their upstream projects while
-preparing this release. Their licenses apply to those components, not to every
-file in this repository. This repo now includes a small starter SDK as well as
-downloads and docs; it still isn't the full loader source tree.
+The corresponding modified source and build/relink files are available at no
+charge in **Aether-0.0.2-source.zip**, alongside this binary on the
+[0.0.2 release page](https://github.com/yorkedegg/EggLoader-Releases/releases/tag/v0.0.2).
+Copies of LGPLv3 and GPLv3 are in `notices/COPYING.LESSER` and `notices/COPYING3`.
+The LGPL applies to the adapted Aether code; it is not a blanket license for
+EggLoader's unrelated code, game inputs or artwork.
 
-The starter copies EggLoader's own `host.h`, `module.ld` and `module_image.py`.
-Its build script and hello example were added for this public repo. They contain
-no game implementation or NuMC source. No additional license grant is implied.
+The original Aether assets are separately restricted and are **not included**.
+Our tiles were made for this port. Entity definitions and base geometry are
+derived locally from the user's game files rather than distributed as game data.
+
+The source kit includes enough EggLoader application code/object files to rebuild
+the pack binding with a modified Aether module. You may use and modify those
+support files to recombine/relink this release with modified Aether code, and
+reverse-engineer it to debug those modifications. No restriction in these notes
+limits rights granted by the LGPL. The private repo/history is not included.
+
+## Dependencies
+
+- libctru, by devkitPro and contributors: `notices/libctru-README.md`.
+- Newlib: `notices/COPYING.NEWLIB`.
+- GCC/devkitARM runtime: `notices/COPYING3` and `notices/COPYING.RUNTIME`.
+- 3gxtool, by Nanquitas: used to make the plugin container; not bundled.
+- Luma3DS and NuMC3DS: required, obtained separately, not bundled.
+
+The Mods frontend's egg graphic is based on Minecraft's icon. Minecraft names
+and imagery belong to their owners. No endorsement by Mojang, Microsoft,
+Nintendo, The Aether Team or other upstream projects is implied.

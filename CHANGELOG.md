@@ -1,5 +1,23 @@
 # Releases
 
+## 0.0.2 — experimental content pack
+
+- Loader Cube, Portal Gun and Aether/Flying Cow, plus three example/test eggs.
+- A local asset preparer using your own game dump and supported NuMC files.
+- Fixed saved-ID mapping, exact file checks and the existing Mods menu.
+- Actual eggs included, with Aether source/build files in a separate ZIP.
+- Catify removed; its stock animated textures restored.
+
+The combined pack was tested in-game by the owner. The later Catify cleanup
+retains the native modules and was installed/read-back checked. No extra gameplay
+pass, long-run benchmark or general multiplayer compatibility claim.
+The plugin executable is unchanged from that cleanup candidate; release metadata
+now correctly describes the supported NuMC content setup.
+
+Source rebuild reproduces Aether's egg and the loader executable exactly.
+A modified Aether build also passes 32 offline ARM startup checks.
+Phyg registration, stereo and the older decorative batch are not shipped features.
+
 ## Docs and starter update
 
 Shorter README, a list of our eggs/prototypes, and a buildable hello-egg example.

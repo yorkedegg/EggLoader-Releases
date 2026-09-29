@@ -1,22 +1,21 @@
-# Our eggs & experiments
+# Eggs in 0.0.2
 
-Stuff we've made while building EggLoader. Some of it predates the drop-in
-loader, so this isn't a folder of mods you can throw into 0.0.1 yet.
+These six files are included in `pack/eggs/`. Install them through the preparer,
+not by copying the archives alone. This release uses a fixed six-egg set.
 
-| Name | What it does | Where it's at |
-| --- | --- | --- |
-| `plugin_smoke` | Logs when an egg loads and receives events. | Included in 0.0.1; tested on console. |
-| `render_probe` | Checks whether the loader exposes rendering services. | Built as an egg; tested offline. 0.0.1 reports the backend unavailable. It doesn't add 3D. |
-| Catify | Puts a cat on block textures. We also tried a sharper 192×192 version. | Asset-only egg / texture-overlay experiment. Worked on console with the older setup; not a 0.0.1 drop-in. Shelved for now. |
-| Loader Cube | Our first custom block. | Older content module; needs prepared textures and IDs. |
-| Portal Gun | Portal blocks and a portal-gun item. | Older prototype; needs its matching assets/setup. |
-| Aether / Flying Cow | Aether-style blocks/worldgen and a custom flying cow. | Older content prototype. The cow survived saving and reopening the world after we fixed an ID mix-up. |
-| Wood & decorative blocks | Extra wood types, decorative blocks and recipes from the early block tests. | Earlier block-mod builds, not standalone eggs for this release. |
-| HUD Stereo | Gives the hearts/hunger HUD depth. | Worked as a separate plugin on an older build. Conversion to a stereo egg is unfinished. |
+| Egg | What it does |
+| --- | --- |
+| `cube_module.egg` | Loader Cube: a small custom-block example. |
+| `portal_module.egg` | Our Portal Gun experiment. Not a complete PortalGunClassic port. |
+| `dimension_module.egg` | Our Aether port experiment: islands, blocks, portals and Flying Cow. Not the full Java mod. |
+| `hello_egg.egg` | Minimal module-entry/logging example. |
+| `plugin_smoke.egg` | Startup and event smoke test. |
+| `render_probe.egg` | Checks the rendering-service API. The backend is unavailable in this build; it doesn't enable 3D. |
 
-`egg_core` is part of the loader, not another mod you need to download.
+Catify is retired and not included. The older woods/decorative batch and HUD
+stereo prototype still need conversion before they can ship as supported eggs.
+Phyg assets and a reserved ID remain in the prepared set, but this tested native
+module does not register Phyg. The newer working-tree implementation is not shipped.
 
-The content mods above need the older prepared setup. Dropping them into 0.0.1
-won't install their textures or IDs. Only the smoke egg ships here for now.
-
-Want to make one? [Start here.](MAKING-EGGS.md)
+Aether source: `Aether-0.0.2-source.zip`, available alongside the binary download.
+The binary uses adapted LGPL-3.0 Aether code; see [NOTICES.md](NOTICES.md).

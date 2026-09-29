@@ -1,5 +1,12 @@
 # Make an egg
 
+**0.0.2 note:** the gameplay release is a fixed prepared pack. Don't copy a new
+egg over its files: it will refuse the changed set. The starter below targets
+the older code-only 0.0.1 setup. For a real content example, grab
+[Aether-0.0.2-source.zip](https://github.com/yorkedegg/EggLoader-Releases/releases/download/v0.0.2/Aether-0.0.2-source.zip).
+It includes the module source, assets and tools to rebuild the pack binding for
+modified Aether code. It doesn't expose the private research repo.
+
 Start small: this example prints a message when it loads and another when block
 initialization runs. No game dump, NuMC source, or private repo needed to build it.
 
@@ -21,7 +28,7 @@ python3 sdk/build.py examples/hello_egg --out build/hello_egg.egg
 The script looks in `$DEVKITARM/bin`, then `$DEVKITPRO/devkitARM/bin`, then
 `/opt/devkitpro/devkitARM/bin`, then your PATH. No extra Python packages needed.
 
-For the [supported 0.0.1 setup](INSTALL.md), close Minecraft and copy the result
+For the [supported 0.0.1 setup](https://github.com/yorkedegg/EggLoader-Releases/blob/v0.0.1/INSTALL.md), close Minecraft and copy the result
 to `/eggloader/eggs/hello_egg.egg`. Start with just this egg after you've tested
 the supplied smoke egg. Stay at the title screen. Look in `/eggloader/plugin.log`
 for `hello_egg: loaded` and `hello_egg: blocks event`.

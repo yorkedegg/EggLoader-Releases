@@ -1,37 +1,40 @@
 # EggLoader
 
-a mod loader for Minecraft on the 3DS. put EggLoader in the plugin slot,
-put your eggs in the eggs folder.
+a mod loader for Minecraft on the 3DS.
 
-[download 0.0.1](https://github.com/yorkedegg/EggLoader-Releases/releases/tag/v0.0.1)
+[download 0.0.2](https://github.com/yorkedegg/EggLoader-Releases/releases/tag/v0.0.2)
 · [install](INSTALL.md)
 · [our eggs](EGGS.md)
 · [make your own](MAKING-EGGS.md)
 
-## where it's at
+## what's in this one
 
-0.0.1 loads code-only eggs and adds a Mods button to the title screen.
-Booting with NuMC, opening Mods, and leaving with B/Done have been tested on console.
+Loader Cube, Portal Gun, our Aether/Flying Cow experiment, and three test eggs.
+All six eggs are in the download, with a Mods button in the title menu.
+Catify is retired. Stereo isn't included yet.
 
-This one's still a menu test. **Don't open a world or join a server yet.**
-It needs the exact USA v9.12.0 / Luma 13.3.3 / NuMC build listed in
-[the install guide](INSTALL.md). Back up first.
+This is still experimental. The combined pack worked in-game on our console;
+the later Catify cleanup was installed and read-back checked, not another
+gameplay pass. Phyg's newer code isn't in the tested binary.
 
-## eggs we've made
+**Read the install guide first.** Content eggs currently need their assets
+prepared on a computer using your own stock game files and matching NuMC build.
+The included Python tool does that; no compiler needed for the release.
+It accepts one exact USA v9.12.0 / Luma 13.3.3 / NuMC combination.
+Back up your saves and use throwaway worlds.
 
-Smoke test, render probe, Catify, Loader Cube, Portal Gun, and the Aether/Flying Cow
-experiments. We've also worked on extra woods, decorative blocks and HUD stereo.
+The plugin and prepared files belong together. This isn't arbitrary
+drag-and-drop content loading yet: changing the egg set needs another preparation
+and plugin build. Don't just delete or add eggs to this pack.
 
-Only the smoke egg is included in 0.0.1.
-[The list](EGGS.md) explains what works where.
+## making mods
 
-## make something
+[Start here](MAKING-EGGS.md) for the small code-only SDK example and its limits.
+Aether's corresponding source and rebuild tools are a separate
+[source ZIP](https://github.com/yorkedegg/EggLoader-Releases/releases/download/v0.0.2/Aether-0.0.2-source.zip).
+Normal players don't need it.
 
-Grab the [starter example and build tool](MAKING-EGGS.md). You'll need Python
-and devkitARM. It builds a tiny egg that writes to the log, so you've got
-something to edit and try without needing our private repo.
+Thanks to NuMC3DS, Luma3DS, devkitPro, Nanquitas and The Aether Team.
+[Credits and licenses](NOTICES.md).
 
-Thanks to NuMC3DS, Luma3DS, devkitPro and Nanquitas.
-[Dependency notices](NOTICES.md).
-
-Not affiliated with Mojang, Microsoft or Nintendo.
+Not affiliated with Mojang, Microsoft, Nintendo or The Aether Team.
